@@ -15,9 +15,9 @@
     "license": "ISC",
     "dependencies": {
         "@pinata/sdk": "^2.1.0",
-        "@story-protocol/core-sdk": "1.2.0-rc.1",
+        "@story-protocol/core-sdk": "^1.2.0-rc.1",
         "ts-node": "^10.9.2",
-        "viem": "^2.8.12"
+        "viem": "^2.21.45"
     },
     "devDependencies": {
         "@types/node": "^20.11.17",
