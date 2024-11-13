@@ -13,7 +13,7 @@ const main = async function () {
     // Docs: https://docs.story.foundation/docs/typescript-sdk-setup
     const config: StoryConfig = {
         account: account,
-        transport: http(RPCProviderUrl),
+        transport: http(process.env.RPC_PROVIDER_URL),
         chainId: 'odyssey',
     }
     const client = StoryClient.newClient(config)
@@ -22,14 +22,46 @@ const main = async function () {
     //
     // Docs: https://docs.story.foundation/docs/ipa-metadata-standard
     const ipMetadata: IpMetadata = client.ipAsset.generateIpMetadata({
-        title: 'My IP Asset',
-        description: 'This is a test IP asset',
-        attributes: [
-            {
-                key: 'Rarity',
-                value: 'Legendary',
-            },
-        ],
+            title: "CICLOPIROX OLAMINE, 2004",
+            description: "Artwork by Damien Hirst, a prominent figure in the Young British Artists movement.",
+            attributes: [
+              {
+                key: "Creator Name",
+                value: "Damien Hirst"
+              },
+              {
+                key: "Creator Description",
+                value: "Damien Hirst, a poster boy for the Young British Artists who rose to prominence in late 1980s London..."
+              },
+              {
+                key: "Creator Instagram",
+                value: "https://www.instagram.com/damienhirst/"
+              },
+              {
+                key: "Creator Wikipedia",
+                value: "https://en.wikipedia.org/wiki/Damien_Hirst"
+              },
+              {
+                key: "Materials",
+                value: "Etching on Hahnemühle paper"
+              },
+              {
+                key: "Size",
+                value: "45 1/10 x 44 3/10 in | 114.5 x 112.5 cm"
+              },
+              {
+                key: "Edition",
+                value: "Edition of 68"
+              },
+              {
+                key: "Signature",
+                value: "Hand-signed by artist, Signed and numbered by the artist"
+              },
+              {
+                key: "Certificate of authenticity",
+                value: "link_to_certificate"
+              }
+            ]
     })
 
     // 3. Set up your NFT Metadata
@@ -38,7 +70,7 @@ const main = async function () {
     const nftMetadata = {
         name: 'NFT representing ownership of IP Asset',
         description: 'This NFT represents ownership of an IP Asset',
-        image: 'https://i.imgur.com/gb59b2S.png',
+        image: 'https://imgur.com/a/Ny9JQUL',
     }
 
     // 4. Upload your IP and NFT Metadata to IPFS

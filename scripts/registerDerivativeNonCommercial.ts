@@ -2,6 +2,7 @@ import { RegisterIpAndMakeDerivativeResponse, RegisterIpResponse, StoryClient, S
 import { Address, http, toHex } from 'viem'
 import { mintNFT } from './utils/mintNFT'
 import { NFTContractAddress, NonCommercialSocialRemixingTermsId, RPCProviderUrl, account } from './utils/utils'
+import { Account, privateKeyToAccount } from 'viem/accounts';
 
 // BEFORE YOU RUN THIS FUNCTION: Make sure to read the README which contains instructions
 // for running this "Register Derivative Non-Commercial" example.
@@ -10,9 +11,12 @@ const main = async function () {
     // 1. Set up your Story Config
     //
     // Docs: https://docs.story.foundation/docs/typescript-sdk-setup
+    const privateKey: Address = `0x${process.env.WALLET_PRIVATE_KEY}`;
+    const account: Account = privateKeyToAccount(privateKey);
+
     const config: StoryConfig = {
         account: account,
-        transport: http(RPCProviderUrl),
+        transport: http(process.env.RPC_PROVIDER_URL),
         chainId: 'odyssey',
     }
     const client = StoryClient.newClient(config)
