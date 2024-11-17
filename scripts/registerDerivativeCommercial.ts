@@ -41,8 +41,7 @@ const main = async function () {
         commercialRevShare: 50, // 50%
         mintingFee: 0,
         currency: CurrencyAddress,
-        // NOTE: The below metadata is not configured properly. It is just to make things simple.
-        // See `simpleMintAndRegister.ts` for a proper example.
+        
         ipMetadata: {
             ipMetadataURI: 'test-uri',
             ipMetadataHash: toHex('test-metadata-hash', { size: 32 }),
