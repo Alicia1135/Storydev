@@ -61,8 +61,7 @@ const main = async function () {
     const childIp: RegisterIpResponse = await client.ipAsset.register({
         nftContract: NFTContractAddress,
         tokenId: childTokenId!,
-        // NOTE: The below metadata is not configured properly. It is just to make things simple.
-        // See `simpleMintAndRegister.ts` for a proper example.
+       
         ipMetadata: {
             ipMetadataURI: 'test-uri',
             ipMetadataHash: toHex('test-metadata-hash', { size: 32 }),
