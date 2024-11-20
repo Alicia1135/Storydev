@@ -40,7 +40,7 @@ const main = async function () {
     const nftMetadata = {
         name: 'NFT representing ownership of IP Asset',
         description: 'This NFT represents ownership of an IP Asset',
-        image: 'https://i.imgur.com/gb59b2S.png',
+        image: 'https://picsum.photos/200',
     }
 
     // 4. Upload your IP and NFT Metadata to IPFS
