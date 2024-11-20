@@ -22,8 +22,8 @@ const main = async function () {
     //
     // Docs: https://docs.story.foundation/docs/ipa-metadata-standard
     const ipMetadata: IpMetadata = client.ipAsset.generateIpMetadata({
-            title: "CICLOPIROX OLAMINE, 2004",
-            description: "Artwork by Damien Hirst, a prominent figure in the Young British Artists movement.",
+            title: "MY IP ASSET NFT",
+            description: "Sample of my NFT",
             attributes: [
               {
                 key: "Creator Name",
